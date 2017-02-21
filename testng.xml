@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite preserve-order="true" name="MainSuite" parallel="false"
+	verbose="2" thread-count="2" >
+
+	<listeners>
+		<listener class-name="com.ecomm.Helper.ExtentReporterNG">
+			
+		</listener>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="com.ecomm.Helper.Screenshot" />		
+	</listeners>
+	<test name="FlipkartSearchTest">
+	
+		<classes>
+			<class name="com.ecomm.Test.FlipkartSearchTest">
+			<methods>
+			<include name="searchTestPass"></include>
+			<include name="searchTestFail"></include>
+			</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	 <!-- Test -->
+</suite> <!-- Suite -->

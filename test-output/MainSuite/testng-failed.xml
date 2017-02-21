@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" verbose="2" name="Failed suite [MainSuite]">
+  <listeners>
+    <listener class-name="com.ecomm.Helper.ExtentReporterNG"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.ecomm.Helper.Screenshot"/>
+  </listeners>
+  <test name="FlipkartSearchTest(failed)">
+    <classes>
+      <class name="com.ecomm.Test.FlipkartSearchTest">
+        <methods>
+          <include name="driverClose"/>
+          <include name="searchTestPass" invocation-numbers="0"/>
+          <include name="browserSetup"/>
+          <include name="searchTestFail" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.ecomm.Test.FlipkartSearchTest -->
+    </classes>
+  </test> <!-- FlipkartSearchTest(failed) -->
+</suite> <!-- Failed suite [MainSuite] -->
