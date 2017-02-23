@@ -16,7 +16,6 @@
 			<class name="com.ecomm.Test.FlipkartSearchTest">
 			<methods>
 			<include name="searchTestPass"></include>
-			<include name="searchTestFail"></include>
 			</methods>
 			</class>
 		</classes>

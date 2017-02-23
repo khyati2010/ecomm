@@ -139,54 +139,40 @@ public class Browser {
 		}
 	}
 
-	/*@AfterSuite
-	public void sendMail() throws IOException {
-		reader.testDataFile(File);
-		final String mailto = reader.readFromColumn("Base", 1, 6);
-		final String psswrd = reader.readFromColumn("Base", 1, 7);
-		Properties props = new Properties();
-		props.put("mail.smtp.auth", "true");
-		props.put("mail.smtp.starttls.enable", "true");
-		props.put("mail.smtp.host", "smtp.gmail.com");
-		props.put("mail.smtp.port", "587");
-		Session session = Session.getInstance(props,
-				new javax.mail.Authenticator() {
-					protected PasswordAuthentication getPasswordAuthentication() {
-						return new PasswordAuthentication(mailto, psswrd);
-					}
-				});
-		try {
-
-			// Define message
-			MimeMessage message = new MimeMessage(session);
-			message.setFrom(new InternetAddress(mailto));
-			message.addRecipient(Message.RecipientType.TO, new InternetAddress(
-					mailto));
-			message.setSubject("Test Report");
-
-			// create the message part
-			MimeBodyPart messageBodyPart = new MimeBodyPart();
-
-			// fill message
-			messageBodyPart.setText("Please Check Attachment for test report");
-
-			Multipart multipart = new MimeMultipart();
-			multipart.addBodyPart(messageBodyPart);
-			String fileAttachment = OutputPath;
-			// Part two is attachment
-			messageBodyPart = new MimeBodyPart();
-			DataSource source = new FileDataSource(fileAttachment);
-			messageBodyPart.setDataHandler(new DataHandler(source));
-			messageBodyPart.setFileName(fileAttachment);
-			multipart.addBodyPart(messageBodyPart);
-			// Put parts in message
-			message.setContent(multipart);
-			// Send the message
-			Transport.send(message);
-			System.out.println("message sent....");
-			reader.closeFile();
-		} catch (MessagingException ex) {
-			ex.printStackTrace();
-		}
-	}*/
+	/*
+	 * @AfterSuite public void sendMail() throws IOException {
+	 * reader.testDataFile(File); final String mailto =
+	 * reader.readFromColumn("Base", 1, 6); final String psswrd =
+	 * reader.readFromColumn("Base", 1, 7); Properties props = new Properties();
+	 * props.put("mail.smtp.auth", "true");
+	 * props.put("mail.smtp.starttls.enable", "true");
+	 * props.put("mail.smtp.host", "smtp.gmail.com");
+	 * props.put("mail.smtp.port", "587"); Session session =
+	 * Session.getInstance(props, new javax.mail.Authenticator() { protected
+	 * PasswordAuthentication getPasswordAuthentication() { return new
+	 * PasswordAuthentication(mailto, psswrd); } }); try {
+	 * 
+	 * // Define message MimeMessage message = new MimeMessage(session);
+	 * message.setFrom(new InternetAddress(mailto));
+	 * message.addRecipient(Message.RecipientType.TO, new InternetAddress(
+	 * mailto)); message.setSubject("Test Report");
+	 * 
+	 * // create the message part MimeBodyPart messageBodyPart = new
+	 * MimeBodyPart();
+	 * 
+	 * // fill message
+	 * messageBodyPart.setText("Please Check Attachment for test report");
+	 * 
+	 * Multipart multipart = new MimeMultipart();
+	 * multipart.addBodyPart(messageBodyPart); String fileAttachment =
+	 * OutputPath; // Part two is attachment messageBodyPart = new
+	 * MimeBodyPart(); DataSource source = new FileDataSource(fileAttachment);
+	 * messageBodyPart.setDataHandler(new DataHandler(source));
+	 * messageBodyPart.setFileName(fileAttachment);
+	 * multipart.addBodyPart(messageBodyPart); // Put parts in message
+	 * message.setContent(multipart); // Send the message
+	 * Transport.send(message); System.out.println("message sent....");
+	 * reader.closeFile(); } catch (MessagingException ex) {
+	 * ex.printStackTrace(); } }
+	 */
 }

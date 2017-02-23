@@ -28,7 +28,8 @@ public class Screenshot extends TestListenerAdapter {
 			WebDriver driver = Browser.config.get(s);
 
 			try {
-				scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+				scrFile = ((TakesScreenshot) driver)
+						.getScreenshotAs(OutputType.FILE);
 
 			} catch (Exception e) {
 				System.out.println("Unable to take screenshot");
@@ -36,22 +37,25 @@ public class Screenshot extends TestListenerAdapter {
 			}
 
 			try {
-				DateFormat dateFormat = new SimpleDateFormat("dd_MMM_yyyy__hh_mm_aa");
+				DateFormat dateFormat = new SimpleDateFormat(
+						"dd_MMM_yyyy__hh_mm_aa");
 				destDir = Browser.screenshotPath;
 				new File(destDir).mkdirs();
 				destFile = dateFormat.format(new java.util.Date()) + ".png";
 				new File(destDir + "/" + destFile);
 				FileUtils.copyFile(scrFile, new File(destDir + "/" + destFile));
 				System.setProperty(ESCAPE_PROPERTY, "false");
-				Reporter.log("<a href='file:///" + destDir + "/" + destFile + "'> <img src='file:///" + destDir + "/"
-						+ destFile + "' hight='550' width='649'/> </a>");
+				Reporter.log("<a href='file:///" + destDir + "/" + destFile
+						+ "'> <img src='file:///" + destDir + "/" + destFile
+						+ "' hight='550' width='649'/> </a>");
 
 			} catch (IOException e) {
-				Reporter.log("error generating screenshot for " + destDir + "/" + destFile + ": " + e, true);
+				Reporter.log("error generating screenshot for " + destDir + "/"
+						+ destFile + ": " + e, true);
 
 			}
 
-		}		
+		}
 
 	}
 

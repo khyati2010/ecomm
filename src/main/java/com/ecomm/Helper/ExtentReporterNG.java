@@ -21,8 +21,11 @@ import com.relevantcodes.extentreports.LogStatus;
 public class ExtentReporterNG implements IReporter {
 	private ExtentReports extent;
 	String destFile;
-	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
-		extent = new ExtentReports(outputDirectory + File.separator + "Extent.html", true);
+
+	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
+			String outputDirectory) {
+		extent = new ExtentReports(outputDirectory + File.separator
+				+ "Extent.html", true);
 
 		for (ISuite suite : suites) {
 			Map<String, ISuiteResult> result = suite.getResults();
@@ -41,7 +44,7 @@ public class ExtentReporterNG implements IReporter {
 	}
 
 	private void buildTestNodes(IResultMap tests, LogStatus status) {
-		ExtentTest test;	
+		ExtentTest test;
 		if (tests.size() > 0) {
 			for (ITestResult result : tests.getAllResults()) {
 				test = extent.startTest(result.getMethod().getMethodName());
@@ -57,7 +60,8 @@ public class ExtentReporterNG implements IReporter {
 				}
 
 				if ((result.FAILURE > 0)) {
-					test.addScreenCapture(Browser.screenshotPath + "/" + Screenshot.destFile);
+					test.addScreenCapture(Browser.screenshotPath + "/"
+							+ Screenshot.destFile);
 				}
 
 				if (result.getThrowable() != null) {
@@ -65,7 +69,8 @@ public class ExtentReporterNG implements IReporter {
 					test.log(status, result.getThrowable());
 				} else {
 					test.log(status, "Test Data - (" + details.toString() + ")");
-					test.log(status, "Test " + status.toString().toLowerCase() + "ed");
+					test.log(status, "Test " + status.toString().toLowerCase()
+							+ "ed");
 				}
 
 				extent.endTest(test);

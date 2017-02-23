@@ -2,12 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21453" started-at="2017-02-21T10:43:13Z" finished-at="2017-02-21T10:43:34Z">
+  <suite name="Default suite" duration-ms="20713" started-at="2017-02-23T12:43:05Z" finished-at="2017-02-23T12:43:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21453" started-at="2017-02-21T10:43:13Z" finished-at="2017-02-21T10:43:34Z">
+    <test name="Default test" duration-ms="20713" started-at="2017-02-23T12:43:05Z" finished-at="2017-02-23T12:43:25Z">
       <class name="com.ecomm.Test.FlipkartSearchTest">
-        <test-method status="PASS" signature="searchTestPass(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.ecomm.Test.FlipkartSearchTest@73d74138]" name="searchTestPass" duration-ms="21417" started-at="2017-02-21T16:13:13Z" description="Search Test" data-provider="laptop" finished-at="2017-02-21T16:13:34Z">
+        <test-method status="PASS" signature="browserSetup()[pri:0, instance:com.ecomm.Test.FlipkartSearchTest@254ce181]" name="browserSetup" is-config="true" duration-ms="9346" started-at="2017-02-23T18:12:55Z" finished-at="2017-02-23T18:13:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method status="PASS" signature="searchTestPass(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.ecomm.Test.FlipkartSearchTest@254ce181]" name="searchTestPass" duration-ms="20608" started-at="2017-02-23T18:13:05Z" description="Search Test" data-provider="laptop" finished-at="2017-02-23T18:13:25Z">
           <params>
             <param index="0">
               <value>
@@ -28,17 +32,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTestPass -->
-      </class> <!-- com.ecomm.Test.FlipkartSearchTest -->
-      <class name="com.ecomm.Helper.Browser">
-        <test-method status="PASS" signature="browserSetup()[pri:0, instance:com.ecomm.Helper.Browser@1404d7f0]" name="browserSetup" is-config="true" duration-ms="5678" started-at="2017-02-21T16:13:07Z" finished-at="2017-02-21T16:13:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserSetup -->
-        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.ecomm.Helper.Browser@1404d7f0]" name="driverClose" is-config="true" duration-ms="536" started-at="2017-02-21T16:13:34Z" finished-at="2017-02-21T16:13:35Z">
+        <test-method status="PASS" signature="driverClose()[pri:0, instance:com.ecomm.Test.FlipkartSearchTest@254ce181]" name="driverClose" is-config="true" duration-ms="753" started-at="2017-02-23T18:13:26Z" finished-at="2017-02-23T18:13:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverClose -->
-      </class> <!-- com.ecomm.Helper.Browser -->
+      </class> <!-- com.ecomm.Test.FlipkartSearchTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

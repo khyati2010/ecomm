@@ -51,7 +51,7 @@ public class Action extends Browser {
 	 */
 	public void type(By locator, String data) // To type data on the specified
 												// locator
-												
+
 	{
 
 		waitForElementVisible(locator);
@@ -71,14 +71,14 @@ public class Action extends Browser {
 	}
 
 	/**
-	 * Click on specified locater
+	 * Click on specified locator
 	 * 
 	 * @param locator
 	 */
 	public void click(By locator) // To click on a locator
 	{
 		waitForElementVisible(locator);
-		element(locator).click(); 
+		element(locator).click();
 
 	}
 
@@ -124,7 +124,6 @@ public class Action extends Browser {
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			Select drop = new Select(element(locator));
@@ -144,7 +143,6 @@ public class Action extends Browser {
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		waitForElementVisible(locator);
