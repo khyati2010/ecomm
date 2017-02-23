@@ -51,7 +51,7 @@ public class Action extends Browser {
 	 */
 	public void type(By locator, String data) // To type data on the specified
 												// locator
-												// Created by - Abhishek Bisht
+												
 	{
 
 		waitForElementVisible(locator);
@@ -78,7 +78,7 @@ public class Action extends Browser {
 	public void click(By locator) // To click on a locator
 	{
 		waitForElementVisible(locator);
-		element(locator).click(); // Created by - Abhishek Bisht
+		element(locator).click(); 
 
 	}
 
